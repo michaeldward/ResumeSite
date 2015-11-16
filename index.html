@@ -1,0 +1,86 @@
+<html>
+<head>
+<title>Resume</title>
+<link rel="stylesheet" type="text/css" href="style.css">
+<link rel="stylesheet" type="text/css" href="style2.css">
+<link rel="shortcut icon" type="image/x-icon" href="dog-4.ico" />
+<script type="text/javascript">
+var images = new Array("pic1.jpg", "pic2.jpg", "pic3.jpg", "pic4.jpg", "pic5.jpg", "pic6.jpg");
+var timer = setInterval("changeImage()", 3500);
+var index = 0;
+function changeImage() {
+	if (index == 5) {
+		index = 0;
+	}
+	else {
+		index = index + 1;
+	}
+	document.getElementById("pic").src = images[index];
+	document.getElementById("pic").height = 500;
+}
+function home() {
+	document.getElementById("box").innerHTML = "<h2>Contact Information</h2><table class=\"info\"><tr><th>Cell Phone</th><td>(925)-518-2065</td></tr><tr><th>Work Phone</th><td>(435)-797-2793</td></tr><tr><th>Email</th><td>xenophon.of.athens@gmail.com</td></tr><tr><th>Mailing Address</th><td>PO Box 1301</td></tr><tr><th></th><td>Logan, UT 84322</td></tr><tr><th>Permanent Address</th><td>436 Jackson Ave</td></tr><tr><th></th><td>Livermore, CA 94550</td></tr></table><br >";
+}
+function aboutMe() {
+	document.getElementById("box").innerHTML = "<p id=\"aboutme\">I'm currently a student at <a href=\"http://usu.edu\"> Utah State University </a> studying computer science. I have taken two years of computer science courses including algorithms and data structures, web development, Python, and computer architecture. I am also pursuing a business minor to give me a greater depth of practical knowledge. The computer science and business experiences combine to provide a solid MIS foundation. If you believe that I can be of assistance to your company, please contact me.</p><ul class=\"experience\"><b>Experience:</b><li class=\"experience\">Web Development</li><li class=\"experience\">Databases</li><li class=\"experience\">Game Development</li><li class=\"experience\">Network Programming</li></ul>";
+}
+function education() {
+	document.getElementById("box").innerHTML = "<h2>Education</h2><ul><li><a href=\"http://www.usu.edu\">Utah State University</a> Class of 2017</li><li><a href=\"http://cs.usu.edu\">Computer Science</a></li><li><a href=\"http://huntsman.usu.edu\">Business</a> and <a href=\"http://math.usu.edu\">Mathematics</a> minors</li></ul><h2>Languages Known</h2><ul><li>Proficient: C++, Java, HTML/CSS, PHP, Python</li><li>Some knowledge: JavaScript, C#</li></ul>";
+}
+function work() {
+	document.getElementById("box").innerHTML = "<h2>Work Experience</h2><table><tr><td><table align=\"center\"><tr><th><u>USU College of Engineering</u></th></tr><tr><td>Staff Assistant</td></tr><tr><td>May 2014 - Present</td></tr><tr><td>Logan, Utah</td></tr></table><br><br><br><table align=\"center\"><tr><th><u>Unified Grocers</u></th></tr><tr><td>Intern</td></tr><tr><td>June 2013 - August 2013</td></tr><tr><td>Livermore, California</td></tr></table></td><td><table align=\"center\"><tr><th><u>JCPenney</u></th></tr><tr><td>Sales Associate</td></tr><tr><td>November 2011 - April 2012</td></tr><tr><td>October 2012 - May 2013</td></tr><tr><td>Pleasanton, California</td></tr></table><br><table align=\"center\"><tr><th><u>Rising Sun Energy Center</u></th></tr><tr><td>Energy Specialist</td></tr><tr><td>June 2012 - August 2012</td></tr><tr><td>Livermore, California</td></tr></table></td></tr></table>";
+}
+function django() {
+	window.location.replace("http://159.203.250.185/");
+}
+function styleOne() {
+	document.styleSheets[0].disabled = false;
+	document.styleSheets[1].disabled = true;
+}
+function styleTwo() {
+	document.styleSheets[0].disabled = true;
+	document.styleSheets[1].disabled = false;
+}
+function noStyles() {
+	document.styleSheets[0].disabled = true;
+	document.styleSheets[1].disabled = true;
+}
+styleOne();
+</script>	
+</head>
+<body>
+<div class="main">
+<div class="navbar">
+<ul class="navbar">
+	<li class="navbar"><button class="navbar" onclick="home()">Home</button></li>
+	<li class="navbar"><button class="navbar" onclick="aboutMe()">About Me</button></li>
+	<li class="navbar"><button class="navbar" onclick="education()">Education</button></li>
+	<li class="navbar"><button class="navbar" onclick="work()">Work Experience</button></li>
+	<li class="navbar"><button class="navbar" onclick="django()">Django</button></li>
+</ul>
+</div>
+<h1>Michael Ward</h1>
+<div class="picture">
+<p><img id="pic" src="pic1.jpg" height="500"></img></p>
+</div>
+<div id="box">
+<h2>Contact Information</h2>
+<table class="info">
+	<tr><th>Cell Phone</th><td>(925)-518-2065</td></tr>
+	<tr><th>Work Phone</th><td>(435)-797-2793</td></tr>
+	<tr><th>Email</th><td>xenophon.of.athens@gmail.com</td></tr>
+	<tr><th>Mailing Address</th><td>PO Box 1301</td></tr>
+	<tr><th></th><td>Logan, UT 84322</td></tr>
+	<tr><th>Permanent Address</th><td>436 Jackson Ave</td></tr>
+	<tr><th></th><td>Livermore, CA 94550</td></tr>
+</table>
+<br >
+</div>
+<div class="bottom">
+<button class="styleOne" onclick="styleOne()">Style One</button>
+<button class="styleTwo" onclick="styleTwo()">Style Two</button>
+<button class="noStyles" onclick="noStyles()">No Styles</button>
+</div>
+</div>
+</body>
+</html>
